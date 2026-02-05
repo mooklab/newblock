@@ -13,12 +13,16 @@ section.main-materials div.cont {
   }
 }
 section.main-materials h2 {
+  font-family: sans-serif;
   margin-bottom: 50px;
 }
 @media (max-width: 1023px) {
   section.main-materials h2 {
     margin-bottom: 25px;
   }
+}
+section.main-materials div.title_anime span {
+  font-family: sans-serif;
 }
 section.main-materials div.tags {
   display: grid;
