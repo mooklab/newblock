@@ -1,0 +1,94 @@
+$breakpoints: ("xs": 479px, "s": 767px, "m": 1023px, "l": 1399px)
+@mixin s($breakpoint)
+    @if map-has-key($breakpoints, $breakpoint)
+        $breakpoint: map-get($breakpoints, $breakpoint)
+        @media (max-width: $breakpoint)
+            @content
+    @else
+        @media (max-width: $breakpoint)
+            @content
+    
+section.main-materials
+    background: #121212
+    color: white
+
+    div.cont
+        display: grid
+        justify-items: start
+        grid-gap: 48px
+        +s(m)
+            grid-gap: 24px
+
+    h2
+        margin-bottom: 50px
+        +s(m)
+            margin-bottom: 25px
+
+    div.tags
+        display: grid
+        grid-template-rows: 0fr
+        transition: all 0.3s
+        &.open
+            grid-template-rows: 1fr
+            & + a span:first-child
+                display: none
+            & + a span:last-child
+                display: block
+        
+        div.overflow
+            overflow: hidden
+            min-height: calc(44px * 3 + 8px * 2)
+            +s(m)
+                min-height: calc(31px * 3 + 8px * 2)
+
+        div.list
+            display: flex
+            flex-wrap: wrap
+            gap: 8px
+
+        a
+            display: flex
+            align-items: center
+            gap: 10px
+            width: max-content
+            white-space: nowrap
+            background: white
+            border-radius: 12px
+            padding: 10px 20px
+            font-weight: 600
+            font-size: 14px
+            line-height: 171%
+            color: #121212
+            text-decoration: none
+            +s(m)
+                font-size: 12px
+                padding: 5px 10px
+                gap: 5px
+            +s(xs)
+                width: calc(50% - 5px)
+
+            span
+                +s(s)
+                    max-width: 250px
+                    overflow: hidden
+                    text-overflow: ellipsis
+                +s(xs)
+                    max-width: 100%
+
+            img
+                +s(m)
+                    width: 16px
+
+    a.btn-green
+        +s(m)
+            line-height: 36px
+            padding: 0 20px
+            font-size: 14px
+
+        span:first-child
+            display: block
+        span:last-child
+            display: none
+
+
+

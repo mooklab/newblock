@@ -1,0 +1,117 @@
+section.main-materials {
+  background: #121212;
+  color: white;
+}
+section.main-materials div.cont {
+  display: grid;
+  justify-items: start;
+  grid-gap: 48px;
+}
+@media (max-width: 1023px) {
+  section.main-materials div.cont {
+    grid-gap: 24px;
+  }
+}
+section.main-materials h2 {
+  margin-bottom: 50px;
+}
+@media (max-width: 1023px) {
+  section.main-materials h2 {
+    margin-bottom: 25px;
+  }
+}
+section.main-materials div.tags {
+  display: grid;
+  grid-template-rows: 0fr;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+section.main-materials div.tags.open {
+  grid-template-rows: 1fr;
+}
+section.main-materials div.tags.open + a span:first-child {
+  display: none;
+}
+section.main-materials div.tags.open + a span:last-child {
+  display: block;
+}
+section.main-materials div.tags div.overflow {
+  overflow: hidden;
+  min-height: 148px;
+}
+@media (max-width: 1023px) {
+  section.main-materials div.tags div.overflow {
+    min-height: 109px;
+  }
+}
+section.main-materials div.tags div.list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 8px;
+}
+section.main-materials div.tags a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  white-space: nowrap;
+  background: white;
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 171%;
+  color: #121212;
+  text-decoration: none;
+}
+@media (max-width: 1023px) {
+  section.main-materials div.tags a {
+    font-size: 12px;
+    padding: 5px 10px;
+    gap: 5px;
+  }
+}
+@media (max-width: 479px) {
+  section.main-materials div.tags a {
+    width: calc(50% - 5px);
+  }
+}
+@media (max-width: 767px) {
+  section.main-materials div.tags a span {
+    max-width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@media (max-width: 479px) {
+  section.main-materials div.tags a span {
+    max-width: 100%;
+  }
+}
+@media (max-width: 1023px) {
+  section.main-materials div.tags a img {
+    width: 16px;
+  }
+}
+@media (max-width: 1023px) {
+  section.main-materials a.btn-green {
+    line-height: 36px;
+    padding: 0 20px;
+    font-size: 14px;
+  }
+}
+section.main-materials a.btn-green span:first-child {
+  display: block;
+}
+section.main-materials a.btn-green span:last-child {
+  display: none;
+}/*# sourceMappingURL=material.css.map */
